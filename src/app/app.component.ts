@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { RouterOutlet } from '@angular/router';
-import { DialogComponent } from './dialog/dialog.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { InfoComponent } from './info/info.component';
 
