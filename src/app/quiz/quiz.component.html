@@ -2,25 +2,28 @@
   <mat-dialog-content>
     <h2>OBACHT! SAVE THE EARTH!</h2>
 
-    <div class="quiz-container" *ngIf="!quizCompleted">
+    <div *ngIf="!quizCompleted">
       <h3>{{ currentQuestion.question }}</h3>
       <div class="options">
         <button
           *ngFor="let option of currentQuestion.options"
           (click)="selectOption(option)"
-          [class.selected]="option === selectedOption"
+          [disabled]="feedback !== null" 
+          [ngClass]="{
+            selected: option === selectedOption,
+            correct: feedback === 'correct' && option === selectedOption,
+            wrong: feedback === 'wrong' && option === selectedOption
+          }"
         >
           {{ option }}
         </button>
       </div>
 
-      <!-- send the answer -->
-      <div class="submit-button" *ngIf="selectedOption">
+      <div class="submit-button" *ngIf="selectedOption && !feedback">
         <button mat-button (click)="submitAnswer()">Submit</button>
       </div>
     </div>
 
-    <!-- final message -->
     <div *ngIf="quizCompleted">
       <h3>¡Quiz completed!</h3>
       <p>Score: {{ score }} / {{ questions.length }}</p>
@@ -31,4 +34,3 @@
     <button mat-button mat-dialog-close>End Quiz</button>
   </mat-dialog-actions>
 </div>
-
