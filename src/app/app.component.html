@@ -1,85 +1,80 @@
-
-
-<div class="Wireframe1" style="width:100vw; height:100vh; position: relative; background:white; overflow:hidden">
+<div class="wireframe1">
   <!-- LEFT PANEL -->
-  <div class="Left" style="width:26%; height:100%; position:absolute; left:0; top:0; background:#F9D2D2; overflow:hidden">
+  <div class="left">
     <!-- Podcast -->
-    <div class="Podcast" style="width:95%; height:30%; position:absolute; left:2%; bottom:5%">
-      <div class="Rectangle3" style="width:100%; height:100%; background:#D9D9D9"></div>
+    <div class="podcast">
+      <div class="rectangle3"></div>
     </div>
 
     <!-- Line -->
-    <div class="Line1" style="width:100%; height:0; position:absolute; top:57%; border-top:1px solid black;"></div>
+    <div class="line1"></div>
 
     <!-- Links -->
-    <div class="Links" style="position:absolute; left:5%; top:60%;">
+    <div class="links">
       <button 
         (click)="openQuiz()" 
-        style="all: unset; cursor:pointer; color:#1A25FF; font-size:1.5vw; font-family:Inter; text-decoration:underline;"
-        onmouseover="this.style.color='#0000EE'"
-        onmouseout="this.style.color='#1A25FF'">
+        class="linkbutton">
         Quiz Link Popup
       </button>
       <br>
       <button 
-        (click)=" openResources()" 
-        style="all: unset; cursor:pointer; color:#1A25FF; font-size:1.5vw; font-family:Inter; text-decoration:underline;"
-        onmouseover="this.style.color='#0000EE'"
-        onmouseout="this.style.color='#1A25FF'">
+        (click)="openResources()" 
+        class="linkbutton">
         Our Ressources
       </button>
-      
     </div>
 
     <!-- Info destruction -->
-    <div class="InfoDestruction" style="width:90%; height:52%; position:absolute; left:2%; top:2%; background:#C3ACAC; overflow:hidden;">
-      <div style="margin:1vw; font-size:1.5vw;">You destroyed the following:</div>
-      <div style="margin:1vw; margin-top:3vw; font-size:1.2vw;">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+    <div class="infodestruction">
+      <div class="infotitle">You destroyed the following:</div>
+      <div class="infotext">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
       </div>
     </div>
   </div>
 
   <!-- RIGHT PANEL -->
-  <div class="Right" style="width:26%; height:100%; position:absolute; right:0; top:0; background:#FAC9C9; overflow:hidden">
-    
-
-    <!-- Info destruction -->
-    <div class="InfoDestruction" style="width:90%; height:52%; position:absolute; left:2%; top:2%; background:#C3ACAC; overflow:hidden">
-      <div style="margin:1vw; font-size:1.5vw;">Your prompt sucks because:</div>
-      <div style="margin:1vw; margin-top:3vw; font-size:1.2vw;">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+  <div class="right">
+    <div class="infodestruction">
+      <div class="infotitle">Your prompt sucks because:</div>
+      <div class="infotext">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
+        voluptua.
       </div>
     </div>
-    <div class="Line2" style="width:100%; height:0; position:absolute; top:57%; border-top:1px solid black;"></div>
 
-    <div style="position:absolute; top:60%; left:2%">
-      <button mat-menu-item (click)="openInfo()">Open Info</button></div>
-    
+    <div class="line2"></div>
+
+    <div class="rightbuttonwrapper">
+      <button mat-menu-item (click)="openInfo()">Open Info</button>
+    </div>
   </div>
 
   <!-- MIDDLE PANEL -->
-  <div class="Middle" style="width:48%; height:100%; position:absolute; left:26%; top:0; background:white; overflow:hidden">
-    <div class="Earth" style="width:64%; height:50%; position:absolute; left:18%; top:25%;">
-      <div class="Frame7" style="width: 100%; height: 100%; position: absolute;">
-        <div class="Ellipse1" style="width:100%; height:100%;  ">
-          <img style="width: 100%; height: 100%;"  src="assets/earth-intro.gif" alt="Mi GIF" />
+  <div class="middle">
+    <div class="earth">
+      <div class="frame7">
+        <div class="earth-container">
+          <img src="assets/earth-intro.gif" alt="Mi GIF" />
         </div>
       </div>
-     
     </div>
 
-    <div class="Title" style="width:55%; height:5%; position:absolute; left:28%; top:6%;">
-      <div style="font-size:2.5vw; font-weight:700;">Destroy This Earth!</div>
+    <div class="title">
+      <div class="titletext">Destroy This Earth!</div>
     </div>
 
-    <div class="PromptInput" style="width:85%; height:12%; position:absolute; left:7.5%; bottom:5%;">
-      <div style="font-size:2vw; font-weight:600;">Prompt Input</div>
+    <div class="promptinput">
+      <div class="promptlabel">Prompt Input</div>
       <app-prompt-input></app-prompt-input>
-    
     </div>
   </div>
 </div>
+
+
 
 
 

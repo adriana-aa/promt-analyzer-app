@@ -1,21 +1,16 @@
-<div class="quiz-container" style="width:800px; margin:10px auto; padding:20px; background:#E3F1F3; border-radius:20px; position:relative;">
+<div class="quiz-container">
 
-
-  <div style="text-align:center; color:black; font-size:36px; font-family:Jersey 25; font-weight:400; margin-bottom:15px;">
-    SAVE THE EARTH
-  </div>
+  <div class="title">SAVE THE EARTH</div>
 
   <mat-dialog-content>
 
- 
     <div *ngIf="!quizCompleted">
 
-      <div style="text-align:center; color:black; font-size:20px; font-family:Jersey 10; font-weight:400; margin-bottom:20px;">
+      <div class="question">
         <h3>{{ currentQuestion.question }}</h3>
       </div>
 
-  
-      <div class="options" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; margin-bottom:20px;">
+      <div class="options">
         <button
           *ngFor="let option of currentQuestion.options"
           (click)="selectOption(option)"
@@ -25,30 +20,26 @@
             correct: feedback === 'correct' && option === selectedOption,
             wrong: feedback === 'wrong' && option === selectedOption
           }"
-          style="width:calc(50% - 5px); height:50px; background:#FF7D00; color:white; font-size:16px; border-radius:15px; border:1px solid black; cursor:pointer;">
+          class="option-button">
           {{ option }}
         </button>
       </div>
 
-  
-      <div class="submit-button" *ngIf="selectedOption && !feedback" style="text-align:center; margin-bottom:20px;">
-        <button mat-button (click)="submitAnswer()" style="width: 100px; height:30px; background:#FF7D00; color:white; font-size:16px; border-radius:50px; border:1px solid black; cursor:pointer;">Submit</button>
+      <div class="submit-button" *ngIf="selectedOption && !feedback">
+        <button mat-button (click)="submitAnswer()" class="submit-btn">Submit</button>
       </div>
 
     </div>
 
- 
-    <div *ngIf="quizCompleted" style="text-align:center; font-size:18px; margin-top:20px;">
+    <div *ngIf="quizCompleted" class="quiz-completed">
       <h3>¡Quiz completed!</h3>
       <p>Score: {{ score }} / {{ questions.length }}</p>
     </div>
 
   </mat-dialog-content>
 
- 
-
 </div>
 
-<mat-dialog-actions style="display:flex; justify-content:center; margin-top:10px;">
-  <button mat-button mat-dialog-close style="font-size:16px; padding:8px 20px;">End Quiz</button>
+<mat-dialog-actions class="dialog-actions">
+  <button mat-button mat-dialog-close class="end-btn">End Quiz</button>
 </mat-dialog-actions>
