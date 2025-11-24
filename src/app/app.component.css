@@ -103,10 +103,15 @@
     border-top: 1px solid antiquewhite;
   }
   
-  .rightbuttonwrapper {
+  .rightbuttonwrapper button {
     position: absolute;
     top: 60%;
     left: 2%;
+    border-radius: 50px !important;
+    padding: 8px;
+    background-color: antiquewhite;
+    color: #d22b22;
+    font-weight: 500;
   }
   
   /* MIDDLE PANEL */
