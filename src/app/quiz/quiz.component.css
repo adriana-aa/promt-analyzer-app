@@ -1,16 +1,17 @@
 
+  
   .quiz-container {
     width: 800px;
     margin: 10px auto;
     padding: 20px;
-    background: #E3F1F3;
+    background: #0c0b26;
     border-radius: 20px;
     position: relative;
+    color: antiquewhite;
   }
   
   .title {
     text-align: center;
-    color: black;
     font-size: 36px;
     font-family: "Jersey 25";
     font-weight: 400;
@@ -19,11 +20,11 @@
   
   .question {
     text-align: center;
-    color: black;
     font-size: 20px;
     font-family: "Jersey 10";
     font-weight: 400;
     margin-bottom: 20px;
+    color: antiquewhite;
   }
   
   .options {
@@ -32,13 +33,14 @@
     justify-content: space-between;
     gap: 10px;
     margin-bottom: 20px;
+   
   }
   
   .option-button {
     width: calc(50% - 5px);
     height: 50px;
-    background: #FF7D00;
-    color: white;
+    background: #ff9d00;
+    color: antiquewhite;
     font-size: 16px;
     border-radius: 15px;
     border: 1px solid black;
@@ -52,12 +54,12 @@
   
   button.correct {
     background-color: #247a32 !important; 
-    color: white;
+    color: antiquewhite;
   }
   
   button.wrong {
     background-color: #f44336 !important; 
-    color: white;
+    color: antiquewhite;
   }
   
   .submit-button {
@@ -68,8 +70,8 @@
   .submit-btn {
     width: 100px;
     height: 30px;
-    background: #FF7D00;
-    color: white;
+    background: #ff9d00;
+    color: #0023bb !important;
     font-size: 16px;
     border-radius: 50px;
     border: 1px solid black;
@@ -80,16 +82,20 @@
     text-align: center;
     font-size: 18px;
     margin-top: 20px;
+    color: antiquewhite;
   }
   
   .dialog-actions {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+   
   }
   
   .end-btn {
     font-size: 16px;
     padding: 8px 20px;
+    color: antiquewhite !important;
+    background: #ff9d00;
   }
   
