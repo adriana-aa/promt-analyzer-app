@@ -1,3 +1,5 @@
+
+
 .wireframe1 {
     width: 100vw;
     height: 100vh;
@@ -13,8 +15,9 @@
     position: absolute;
     left: 0;
     top: 0;
-    background: #F9D2D2;
+    background: #0c0b26;
     overflow: hidden;
+    color: antiquewhite;
   }
   
   .podcast {
@@ -36,7 +39,8 @@
     height: 0;
     position: absolute;
     top: 57%;
-    border-top: 1px solid black;
+    border-top: 1px solid  antiquewhite;
+ 
   }
   
   .links {
@@ -50,7 +54,6 @@
     cursor: pointer;
     color: #1A25FF;
     font-size: 1.5vw;
-    font-family: Inter;
     text-decoration: underline;
   }
   
@@ -64,7 +67,7 @@
     position: absolute;
     left: 2%;
     top: 2%;
-    background: #C3ACAC;
+    background: #175c6c;
     overflow: hidden;
   }
   
@@ -86,8 +89,9 @@
     position: absolute;
     right: 0;
     top: 0;
-    background: #FAC9C9;
+    background: #0c0b26;
     overflow: hidden;
+    color: antiquewhite;
   }
   
   .line2 {
@@ -95,7 +99,7 @@
     height: 0;
     position: absolute;
     top: 57%;
-    border-top: 1px solid black;
+    border-top: 1px solid antiquewhite;
   }
   
   .rightbuttonwrapper {
@@ -111,7 +115,7 @@
     position: absolute;
     left: 26%;
     top: 0;
-    background: white;
+    background: antiquewhite;
     overflow: hidden;
   }
   
@@ -142,9 +146,10 @@
     top: 6%;
   }
   
-  .titletext {
+  h1 {
     font-size: 2.5vw;
     font-weight: 700;
+    color: #d22b22;
   }
   
   .promptinput {
@@ -158,5 +163,6 @@
   .promptlabel {
     font-size: 2vw;
     font-weight: 600;
+    color: #d22b22;
   }
   
