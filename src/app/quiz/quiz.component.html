@@ -1,4 +1,4 @@
-<div class="quiz-container">
+<div class="quiz-container container-fluid">
 
   <div class="title">SAVE THE EARTH</div>
 
@@ -10,19 +10,22 @@
         <h3>{{ currentQuestion.question }}</h3>
       </div>
 
-      <div class="options">
-        <button
+      <div class="options row g-2">
+        <div 
           *ngFor="let option of currentQuestion.options"
-          (click)="selectOption(option)"
-          [disabled]="feedback !== null"
-          [ngClass]="{
-            selected: option === selectedOption,
-            correct: feedback === 'correct' && option === selectedOption,
-            wrong: feedback === 'wrong' && option === selectedOption
-          }"
-          class="option-button">
-          {{ option }}
-        </button>
+          class="col-12 col-md-6">
+          <button
+            (click)="selectOption(option)"
+            [disabled]="feedback !== null"
+            [ngClass]="{
+              selected: option === selectedOption,
+              correct: feedback === 'correct' && option === selectedOption,
+              wrong: feedback === 'wrong' && option === selectedOption
+            }"
+            class="option-button w-100">
+            {{ option }}
+          </button>
+        </div>
       </div>
 
       <div class="submit-button" *ngIf="selectedOption && !feedback">
