@@ -303,7 +303,10 @@
 
 /* MOBILE: design for small sites */
 @media (max-width: 767px) {
-  .left, .right, .middle {
+
+  .left,
+  .right,
+  .middle {
     min-height: auto;
   }
 
@@ -326,4 +329,28 @@
   .infotext {
     font-size: 1rem;
   }
+}
+
+.evaluation {
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.okay {
+  background-color: #f0d373 !important;
+  border: 2px solid #ffeeba;
+}
+
+.medium {
+  background-color: #fc9d18 !important;
+  border: 2px solid #ffe5b4;
+}
+
+.bad {
+  background-color: #f05562 !important;
+  border: 2px solid #f5c6cb;
 }

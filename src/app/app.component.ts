@@ -6,11 +6,11 @@ import { InfoComponent } from './info/info.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { PromptInputComponent } from './prompt-input/prompt-input.component';
 import { PromptService } from './prompt-input/prompt-service';
-import { NgFor } from '@angular/common';
+import { NgFor, NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, PromptInputComponent, NgFor],
+  imports: [RouterOutlet, PromptInputComponent, NgFor, NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
