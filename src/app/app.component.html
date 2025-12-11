@@ -1,16 +1,18 @@
 <div class="wireframe1">
   <div class="container-fluid">
     <div class="row">
-      
+
       <!-- LEFT PANEL -->
       <div class="col-12 col-lg-3 order-1 order-lg-1 left">
         <!-- Info destruction -->
         <div class="infodestruction">
           <div class="infotitle">You destroyed the following:</div>
           <div class="infotext">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
-            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            <ul>
+              <li *ngFor="let t of leftPanelTexts">
+                {{ t }}
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -19,14 +21,10 @@
 
         <!-- Links -->
         <div class="links">
-          <button 
-            (click)="openQuiz()" 
-            class="linkbutton">
+          <button (click)="openQuiz()" class="linkbutton">
             Quiz Link Popup
           </button>
-          <button 
-            (click)="openResources()" 
-            class="linkbutton">
+          <button (click)="openResources()" class="linkbutton">
             Our Ressources
           </button>
         </div>
@@ -61,9 +59,11 @@
         <div class="infodestruction">
           <div class="infotitle">Your prompt sucks because:</div>
           <div class="infotext">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
-            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
-            voluptua.
+            {{ prompt }}
+          </div>
+
+          <div class="evaluation">
+            Rating: {{ evaluation }}
           </div>
         </div>
 
