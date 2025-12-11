@@ -1,83 +1,81 @@
 <div class="wireframe1">
-  <!-- LEFT PANEL -->
-  <div class="left">
-    <!-- Podcast -->
-    <div class="podcast">
-     
-    </div>
+  <div class="container-fluid">
+    <div class="row">
+      
+      <!-- LEFT PANEL -->
+      <div class="col-12 col-lg-3 order-1 order-lg-1 left">
+        <!-- Info destruction -->
+        <div class="infodestruction">
+          <div class="infotitle">You destroyed the following:</div>
+          <div class="infotext">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
+            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          </div>
+        </div>
 
-    <!-- Line -->
-    <div class="line1"></div>
+        <!-- Line -->
+        <div class="line1"></div>
 
-    <!-- Links -->
-    <div class="links">
-      <button 
-        (click)="openQuiz()" 
-        class="linkbutton">
-        Quiz Link Popup
-      </button>
-      <br>
-      <button 
-        (click)="openResources()" 
-        class="linkbutton">
-        Our Ressources
-      </button>
-    </div>
+        <!-- Links -->
+        <div class="links">
+          <button 
+            (click)="openQuiz()" 
+            class="linkbutton">
+            Quiz Link Popup
+          </button>
+          <button 
+            (click)="openResources()" 
+            class="linkbutton">
+            Our Ressources
+          </button>
+        </div>
 
-    <!-- Info destruction -->
-    <div class="infodestruction">
-      <div class="infotitle">You destroyed the following:</div>
-      <div class="infotext">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      </div>
-    </div>
-  </div>
-
-  <!-- RIGHT PANEL -->
-  <div class="right">
-    <div class="infodestruction">
-      <div class="infotitle">Your prompt sucks because:</div>
-      <div class="infotext">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
-        voluptua.
-      </div>
-    </div>
-
-    <div class="line2"></div>
-
-    <div class="rightbuttonwrapper">
-      <button mat-menu-item (click)="openInfo()">Open Info</button>
-    </div>
-  </div>
-
-  <!-- MIDDLE PANEL -->
-  <div class="middle">
-    <div class="earth">
-      <div class="frame7">
-        <div class="earth-container">
-          <img src="assets/earth-intro.gif" alt="Mi GIF" />
+        <!-- Podcast -->
+        <div class="podcast">
         </div>
       </div>
-    </div>
 
-    <div class="title">
-      <h1>Destroy This Earth!</h1>
-    </div>
+      <!-- MIDDLE PANEL -->
+      <div class="col-12 col-lg-6 order-2 order-lg-2 middle">
+        <div class="title">
+          <h1>Destroy This Earth!</h1>
+        </div>
 
-    <div class="promptinput">
-      <div class="promptlabel">Prompt Input</div>
-      <app-prompt-input></app-prompt-input>
+        <div class="earth">
+          <div class="frame7">
+            <div class="earth-container">
+              <img src="assets/earth-intro.gif" alt="Mi GIF" />
+            </div>
+          </div>
+        </div>
+
+        <div class="promptinput">
+          <div class="promptlabel">Prompt Input</div>
+          <app-prompt-input></app-prompt-input>
+        </div>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="col-12 col-lg-3 order-3 order-lg-3 right">
+        <div class="infodestruction">
+          <div class="infotitle">Your prompt sucks because:</div>
+          <div class="infotext">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
+            voluptua.
+          </div>
+        </div>
+
+        <div class="line2"></div>
+
+        <div class="rightbuttonwrapper">
+          <button mat-menu-item (click)="openInfo()">Open Info</button>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
-
-
-
-
-
- 
 
 <router-outlet />
