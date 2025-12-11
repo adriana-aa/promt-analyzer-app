@@ -7,7 +7,7 @@
         <!-- Info destruction -->
         <div class="infodestruction">
           <div class="infotitle">You destroyed the following:</div>
-          <div class="infotext">
+          <div class="infotext scrollable">
             <ul>
               <li *ngFor="let t of leftPanelTexts">
                 {{ t }}
@@ -56,16 +56,18 @@
 
       <!-- RIGHT PANEL -->
       <div class="col-12 col-lg-3 order-3 order-lg-3 right">
-        <div class="infodestruction">
+        <div class="infodestruction ">
           <div class="infotitle">Your prompt sucks because:</div>
-          <div class="evaluation" [ngClass]="evaluation">
-            Rating: {{ evaluation }}
-          </div>
-          <div class="infotext">
-            {{ prompt }}
-          </div>
+            <div class="evaluation" [ngClass]="evaluation">
+              Rating: {{ evaluation }}
+            </div>
+            <div class="infotext scrollable">
+              {{ prompt }}
+            </div>
         </div>
+
         <div class="line2"></div>
+
         <div class="rightbuttonwrapper">
           <button mat-menu-item (click)="openInfo()">Open Info</button>
         </div>

@@ -27,19 +27,19 @@ export class AppComponent {
 
   ratingTexts = {
     okay: [
-      "Die Datenbanken mussten nur minimal belastet werden.",
-      "Die Energieaufnahme bleibt fast im Grundverbrauch.",
-      "Nur ein Bruchteil der Rechenkerne wurde aktiviert."
+      "- A few web searches were done.",
+      "- Tiny amount of electricity used.",
+      "- No noticeable environmental impact."
     ],
     medium: [
-      "Mehrere Rechenknoten mussten kurzzeitig hochgefahren werden.",
-      "Der Speicherbedarf lag klar über dem Baseline-Niveau.",
-      "Die Serverfarm erzeugte temporär erhöhte Abwärme."
+      "- Your prompt used several servers, roughly the electricity of a small home for an hour.",
+      "- Cloud storage and computing resources temporarily increased, like running a few laptops continuously.",
+      "- Some electricity and cooling needed, equivalent to a few light bulbs running all day."
     ],
     bad: [
-      "Das Rechenzentrum musste zusätzliche Kapazitäten bereitstellen.",
-      "Der Energiebedarf erreichte Peak-Level für die Verarbeitung.",
-      "Mehrere GPUs liefen unter Volllast, um deinen Prompt zu bewältigen."
+      "- Processing this long prompt consumed multiple server racks, roughly equal to a small factory’s daily energy use.",
+      "- Large-scale computations increased carbon emissions enough to power several homes for a day.",
+      "- Servers worked at full capacity, drawing electricity and cooling like clearing a small forest for data center expansion."
     ]
   };
 
@@ -90,5 +90,3 @@ export class AppComponent {
     })
   }
 }
-
-
