@@ -38,6 +38,8 @@
 
 .links {
   margin: 20px 0;
+  position: relative;
+  z-index: 10;
 }
 
 .linkbutton {
@@ -48,6 +50,8 @@
   text-decoration: underline;
   display: block;
   margin-bottom: 10px;
+  position: relative;
+  z-index: 10;
 }
 
 .linkbutton:hover {
@@ -154,7 +158,7 @@
   margin-bottom: 10px;
 }
 
-/* DESKTOP: keep the original design */
+/* DESKTOP: Main design */
 @media (min-width: 992px) {
   .wireframe1 {
     height: 100vh;
@@ -286,7 +290,7 @@
   }
 }
 
-/* TABLET: Ajustes intermedios */
+/* TABLET */
 @media (min-width: 768px) and (max-width: 991px) {
   .title h1 {
     font-size: 2rem;
@@ -297,7 +301,7 @@
   }
 }
 
-/* MOBILE: Ajustes para pantallas pequeñas */
+/* MOBILE: design for small sites */
 @media (max-width: 767px) {
   .left, .right, .middle {
     min-height: auto;
