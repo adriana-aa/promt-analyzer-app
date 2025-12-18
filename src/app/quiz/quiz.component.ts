@@ -112,6 +112,6 @@ export class QuizComponent {
       if (this.currentIndex >= this.questions.length) {
         this.quizCompleted = true;
       }
-    }, 1500);
+    }, 1000);
   }
 }
