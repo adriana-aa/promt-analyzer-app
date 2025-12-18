@@ -153,10 +153,27 @@
   align-items: center;
 }
 
-.earth {
+.healthbar {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-55%);
+  width: 40%;
+  text-align: center;
+  z-index: 5;
+}
+
+.healthbar img {
   width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
+  height: auto;
+}
+
+.earth {
+  top: 25%;
+  left: 18%;
+  width: 64%;
+  height: 50%;
+  margin: 0;
 }
 
 .frame7 {
