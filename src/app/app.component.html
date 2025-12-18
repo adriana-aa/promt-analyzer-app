@@ -1,16 +1,18 @@
 <div class="wireframe1">
   <div class="container-fluid">
     <div class="row">
-      
+
       <!-- LEFT PANEL -->
       <div class="col-12 col-lg-3 order-3 order-lg-1 left">
         <!-- Info destruction -->
         <div class="infodestruction">
           <div class="infotitle">You destroyed the following:</div>
-          <div class="infotext">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
-            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          <div class="infotext scrollable">
+            <ul>
+              <li *ngFor="let t of leftPanelTexts">
+                {{ t }}
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -19,14 +21,10 @@
 
         <!-- Links -->
         <div class="links">
-          <button 
-            (click)="openQuiz()" 
-            class="linkbutton">
+          <button (click)="openQuiz()" class="linkbutton">
             Quiz Link Popup
           </button>
-          <button 
-            (click)="openResources()" 
-            class="linkbutton">
+          <button (click)="openResources()" class="linkbutton">
             Our Ressources
           </button>
         </div>
@@ -57,14 +55,15 @@
       </div>
 
       <!-- RIGHT PANEL -->
-      <div class="col-12 col-lg-3 order-2 order-lg-3 right">
-        <div class="infodestruction">
+      <div class="col-12 col-lg-3 order-3 order-lg-3 right">
+        <div class="infodestruction ">
           <div class="infotitle">Your prompt sucks because:</div>
-          <div class="infotext">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
-            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
-            voluptua.
-          </div>
+            <div class="evaluation" [ngClass]="evaluation">
+              Rating: {{ evaluation }}
+            </div>
+            <div class="infotext scrollable">
+              {{ prompt }}
+            </div>
         </div>
 
         <div class="line2"></div>
