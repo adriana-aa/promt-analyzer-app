@@ -54,17 +54,16 @@
 .linkbutton {
   all: unset;
   cursor: pointer;
-  color: #1A25FF;
-  font-size: 1.5rem;
+  color: #d22b22;
+  font-weight: 500;
   text-decoration: underline;
   display: block;
   margin-bottom: 10px;
   position: relative;
   z-index: 10;
-  padding: 5px;
-  border: 2px solid #1A25FF;
-  border-radius: 8px;
-  background-color: rgba(26, 37, 255, 0.1);
+  padding: 12px 24px;
+  border-radius: 50px;
+  background-color: antiquewhite
 }
 
 .linkbutton:hover {
@@ -72,7 +71,6 @@
 }
 
 .infodestruction {
-  position: sticky;
   top: 20px;
   background: #175c6c;
   border-radius: 20px;
