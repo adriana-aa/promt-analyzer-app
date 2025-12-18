@@ -22,15 +22,16 @@
         <!-- Links -->
         <div class="links">
           <button (click)="openQuiz()" class="linkbutton">
-            Quiz Link Popup
+            Test Your AI Knowledge
           </button>
           <button (click)="openResources()" class="linkbutton">
-            Our Ressources
+            Our Very Credible Resources
           </button>
         </div>
 
         <!-- Podcast -->
         <div class="podcast">
+          <img src="assets/podc1.png" alt="Podcast" />
         </div>
       </div>
 
@@ -58,12 +59,12 @@
       <div class="col-12 col-lg-3 order-3 order-lg-3 right">
         <div class="infodestruction ">
           <div class="infotitle">Your prompt sucks because:</div>
-            <div class="evaluation" [ngClass]="evaluation">
-              Rating: {{ evaluation }}
-            </div>
-            <div class="infotext scrollable">
-              {{ prompt }}
-            </div>
+          <div class="evaluation" [ngClass]="evaluation">
+            Rating: {{ evaluation }}
+          </div>
+          <div class="infotext scrollable">
+            {{ prompt }}
+          </div>
         </div>
 
         <div class="line2"></div>
