@@ -1,48 +1,46 @@
-<div class="quiz-container container-fluid">
+<div class="quiz-container">
 
   <div class="title">SAVE THE EARTH</div>
 
-  <mat-dialog-content>
-
-    <div *ngIf="!quizCompleted">
-
-      <div class="question">
-        <h3>{{ currentQuestion.question }}</h3>
-      </div>
-
-      <div class="options row g-2">
-        <div 
-          *ngFor="let option of currentQuestion.options"
-          class="col-12 col-md-6">
-          <button
-            (click)="selectOption(option)"
-            [disabled]="feedback !== null"
-            [ngClass]="{
-              selected: option === selectedOption,
-              correct: feedback === 'correct' && option === selectedOption,
-              wrong: feedback === 'wrong' && option === selectedOption
-            }"
-            class="option-button w-100">
-            {{ option }}
-          </button>
-        </div>
-      </div>
-
-      <div class="submit-button" *ngIf="selectedOption && !feedback">
-        <button mat-button (click)="submitAnswer()" class="submit-btn">Submit</button>
-      </div>
-
+  <!-- FRAGEN -->
+  <div *ngIf="!quizCompleted">
+    <div class="question">
+      <h3>{{ currentQuestion.question }}</h3>
     </div>
 
-    <div *ngIf="quizCompleted" class="quiz-completed">
-      <h3>¡Quiz completed!</h3>
-      <p>Score: {{ score }} / {{ questions.length }}</p>
+    <div class="options">
+      <button
+        *ngFor="let option of currentQuestion.options"
+        (click)="selectOption(option)"
+        [disabled]="feedback !== null"
+        [ngClass]="{
+          selected: option === selectedOption,
+          correct: feedback === 'correct' && option === selectedOption,
+          wrong: feedback === 'wrong' && option === selectedOption
+        }"
+        class="option-button">
+        {{ option }}
+      </button>
     </div>
 
-  </mat-dialog-content>
+    <div class="submit-button" *ngIf="selectedOption && !feedback">
+      <button mat-button (click)="submitAnswer()" class="submit-btn">Submit</button>
+    </div>
+  </div>
+
+  <!-- QUIZ BEENDET -->
+  <div *ngIf="quizCompleted" class="quiz-completed">
+    <h3>Quiz completed!</h3>
+    <p>Score: {{ score }} / {{ questions.length }}</p>
+    <p>Total ELP: {{ elp }}</p>
+  </div>
+
+  <!-- BUTTON CLOSE -->
+  <button mat-button mat-dialog-close class="end-btn">End Quiz</button>
+
+  <!-- FIXED ELP INNERHALB DES QUIZ -->
+  <div class="elp-bar">
+    ELP: {{ elp }}
+  </div>
 
 </div>
-
-<mat-dialog-actions class="dialog-actions">
-  <button mat-button mat-dialog-close class="end-btn">End Quiz</button>
-</mat-dialog-actions>

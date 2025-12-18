@@ -1,16 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
-import {
-  MatDialogActions,
-  MatDialogClose,
-  MatDialogContent,
-} from '@angular/material/dialog';
+import { MatDialogClose } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [MatDialogContent, MatDialogActions, MatDialogClose, MatButtonModule, CommonModule],
+  imports: [CommonModule, MatButtonModule, MatDialogClose],
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.css']
 })
@@ -81,6 +77,7 @@ export class QuizComponent {
   currentIndex = 0;
   selectedOption: string | null = null;
   score = 0;
+  elp = 0; // Earth Life Points
   quizCompleted = false;
   feedback: 'correct' | 'wrong' | null = null;
 
@@ -95,15 +92,14 @@ export class QuizComponent {
   submitAnswer() {
     if (!this.selectedOption) return;
 
-    // Comprobamos si la respuesta es correcta
     if (this.selectedOption === this.currentQuestion.answer) {
       this.score++;
+      this.elp += 100; // +100 ELP pro richtige Antwort
       this.feedback = 'correct';
     } else {
       this.feedback = 'wrong';
     }
 
-    // Esperar 1 segundo antes de pasar a la siguiente pregunta
     setTimeout(() => {
       this.selectedOption = null;
       this.feedback = null;
