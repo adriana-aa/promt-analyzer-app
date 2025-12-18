@@ -32,7 +32,7 @@ export class QuizComponent {
   selectedOption: string | null = null;
   score = 0;
   quizCompleted = false;
-  feedback: 'correct' | 'wrong' | null = null; // ← Nuevo estado visual
+  feedback: 'correct' | 'wrong' | null = null; 
 
   get currentQuestion() {
     return this.questions[this.currentIndex];
