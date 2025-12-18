@@ -89,4 +89,12 @@ export class AppComponent {
 
     })
   }
+
+  toggleAudio(audio: HTMLAudioElement) {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
 }

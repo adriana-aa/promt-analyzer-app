@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .podcast img {
@@ -32,7 +33,21 @@
   height: auto;
   object-fit: contain;
 }
-
+.play-pause-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+}
 .rectangle3 {
   width: 100%;
   height: 100%;
