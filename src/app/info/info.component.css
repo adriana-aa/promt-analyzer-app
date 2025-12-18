@@ -1,0 +1,16 @@
+.info-container {
+  padding: 16px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 8px;
+}
+
+.info-container h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.3em;
+  color: #333;
+}
+.btnStyle{
+    padding: 16px;
+    background-color: #1976d2;
+}
